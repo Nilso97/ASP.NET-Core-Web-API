@@ -10,10 +10,11 @@ namespace ASP._NET_Core_Web_API.Controllers
 {
     [ApiController]
     [Route("api/dev-events")]
-    public class DevEventsController : ControllerBase
+    public class DevEventController : ControllerBase
     {
         private readonly DevEventsDbContext _context;
-        public DevEventsController(DevEventsDbContext context)
+
+        public DevEventController(DevEventsDbContext context)
         {
             _context = context;
         }
@@ -21,17 +22,17 @@ namespace ASP._NET_Core_Web_API.Controllers
         [HttpGet]
         public IActionResult GetAllDevEvents()
         {
-            var devEvents = _context.DevEvents.Where(d => !d.IsDeleted).ToList();
+            var devEvents = _context.Events.Where(e => !e.IsDeleted).ToList();
 
             return Ok(devEvents);
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetDevEventById(Guid id)
+        public IActionResult GetEventById(Guid id)
         {
-            var devEvent = _context.DevEvents.SingleOrDefault(d => d.Id == id);
+            var devEvent = _context.Events.SingleOrDefault(e => e.Id == id);
 
-            if (devEvent == null) 
+            if (devEvent == null)
             {
                 return NotFound($"Message: Evento de id{id} não encontrado!");
             }
@@ -39,18 +40,18 @@ namespace ASP._NET_Core_Web_API.Controllers
             return Ok(devEvent);
         }
 
-        [HttpPost("/salvar")]
-        public IActionResult SaveDevEvent([FromBody] DevEvent devEvent)
+        [HttpPost]
+        public IActionResult SaveEvent([FromBody] DevEvent devEvent)
         {
-            _context.DevEvents.Add(devEvent);
+            _context.Events.Add(devEvent);
 
-            return CreatedAtAction(nameof(GetDevEventById), new { id = devEvent.Id }, devEvent);
+            return CreatedAtAction(nameof(GetEventById), new { id = devEvent.Id }, devEvent);
         }
 
         [HttpPut("/atualizar/{id}")]
-        public IActionResult UpdateDevEvent(Guid id, [FromBody] DevEvent input)
+        public IActionResult UpdateEvent(Guid id, [FromBody] DevEvent input)
         {
-            var devEvent = _context.DevEvents.SingleOrDefault(d => d.Id == id);
+            var devEvent = _context.Events.SingleOrDefault(e => e.Id == id);
 
             if (devEvent == null)
             {
@@ -63,9 +64,9 @@ namespace ASP._NET_Core_Web_API.Controllers
         }
 
         [HttpDelete("/deletar/{id}")]
-        public IActionResult DeleteDevEvent(Guid id)
+        public IActionResult DeleteEvent(Guid id)
         {
-            var devEvent = _context.DevEvents.SingleOrDefault(d => d.Id == id);
+            var devEvent = _context.Events.SingleOrDefault(e => e.Id == id);
 
             if (devEvent == null)
             {
@@ -78,9 +79,9 @@ namespace ASP._NET_Core_Web_API.Controllers
         }
 
         [HttpPost("{id}/palestrante")]
-        public IActionResult SaveSpeakerInDevEvent(Guid id, [FromBody] DevEventSpeaker speaker)
+        public IActionResult SaveSpeakerInEvent(Guid id, DevEventSpeaker speaker)
         {
-            var devEvent = _context.DevEvents.SingleOrDefault(d => d.Id == id);
+            var devEvent = _context.Events.SingleOrDefault(d => d.Id == id);
 
             if (devEvent == null)
             {

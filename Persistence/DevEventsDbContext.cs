@@ -8,11 +8,11 @@ namespace ASP._NET_Core_Web_API.Persistence
 {
     public class DevEventsDbContext
     {
-        public List<DevEvent> DevEvents { get; set; }
+        public List<DevEvent> Events { get; set; }
 
         public DevEventsDbContext()
         {
-            DevEvents = new List<DevEvent>();
+            Events = new List<DevEvent>();
         }
     }
 }

@@ -18,8 +18,8 @@ namespace ASP._NET_Core_Web_API.Entities
         public string Description { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public List<DevEventSpeaker> Speakers { get; set; }
         public bool IsDeleted { get; set; }
+        public List<DevEventSpeaker> Speakers { get; set; }
 
         public void Update(string title, string description, DateTime startDate, DateTime endDate)
         {
