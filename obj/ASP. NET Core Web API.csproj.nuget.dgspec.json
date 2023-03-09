@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/nilsojr/Documentos/ASP. NET Core Web API/ASP. NET Core Web API.csproj": {}
+    "/home/nilsojr/Documentos/Awesome Dev Events/ASP. NET Core Web API.csproj": {}
   },
   "projects": {
-    "/home/nilsojr/Documentos/ASP. NET Core Web API/ASP. NET Core Web API.csproj": {
+    "/home/nilsojr/Documentos/Awesome Dev Events/ASP. NET Core Web API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/nilsojr/Documentos/ASP. NET Core Web API/ASP. NET Core Web API.csproj",
+        "projectUniqueName": "/home/nilsojr/Documentos/Awesome Dev Events/ASP. NET Core Web API.csproj",
         "projectName": "ASP. NET Core Web API",
-        "projectPath": "/home/nilsojr/Documentos/ASP. NET Core Web API/ASP. NET Core Web API.csproj",
+        "projectPath": "/home/nilsojr/Documentos/Awesome Dev Events/ASP. NET Core Web API.csproj",
         "packagesPath": "/home/nilsojr/.nuget/packages/",
-        "outputPath": "/home/nilsojr/Documentos/ASP. NET Core Web API/obj/",
+        "outputPath": "/home/nilsojr/Documentos/Awesome Dev Events/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/nilsojr/.nuget/NuGet/NuGet.Config"

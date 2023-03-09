@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cZLj0boxovArWX85pNIbyqS7DQhNFFOo+84xUJLn76/2OOh+PLK2nawzJ5cK8OHkbMGqFeXl+z56Mh9Eb3cAXA==",
+  "dgSpecHash": "dC3vPO/AQDeY7c4czRVDvsTTm3TBjhxVAqlU6iTqVo21tl0AGCbzLIQyLpk2J6rFhdP7q7lYCCJ4AnpYTP6czg==",
   "success": true,
-  "projectFilePath": "/home/nilsojr/Documentos/ASP. NET Core Web API/ASP. NET Core Web API.csproj",
+  "projectFilePath": "/home/nilsojr/Documentos/Awesome Dev Events/ASP. NET Core Web API.csproj",
   "expectedPackageFiles": [
     "/home/nilsojr/.nuget/packages/microsoft.aspnetcore.openapi/7.0.3/microsoft.aspnetcore.openapi.7.0.3.nupkg.sha512",
     "/home/nilsojr/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
